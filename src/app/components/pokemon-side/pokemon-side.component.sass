@@ -1,0 +1,138 @@
+@mixin container-div-shadow
+  border-radius: 16px
+  box-shadow: 0px 6px 15px 6px rgba(36, 37, 38, 0.08)
+  background-color: white
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+ 
+
+@mixin add-icon-style
+  position: fixed
+  padding: 0px 0px 5px 5px
+  color: $colorGreen
+  -o-transition: .5s
+  -ms-transition: .5s
+  -moz-transition: .5s
+  -webkit-transition: .5s
+  transition: .5s
+
+$layout-xs: 768px
+$layout-sm: 1024px
+$layout-mat: 1280px
+$layout-lg: 1920px
+
+
+$salmon: #feb47b
+
+
+.pokemon-view
+
+  @media screen and (max-width: $layout-xs) and (orientation: landscape)
+
+    .columns .column
+      flex-basis: 100%
+      margin: 0 0 5px 0
+
+
+
+  @media screen and (max-width: $layout-sm)
+    .columns .column
+      margin-bottom: 5px
+      flex-basis: 40%
+
+      &:nth-last-child(2)
+        margin-right: 0
+
+
+      &:last-child
+        flex-basis: 100%
+        margin: 0
+
+
+
+
+  .columns
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    margin: 15px 10px
+
+
+  .column
+    box-shadow: 0px 6px 15px 0px rgba(40, 80, 121, 0.25)
+    height: auto
+    flex: 1
+    margin: 5px
+    padding: 24px 30px
+    border-radius: 10px
+    transition: all .2s ease-in-out
+    color: #b3b745
+    text-transform: capitalize
+    border: 3px solid #b3b745
+    background-color: #343a40
+
+    &:first-child
+      margin-left: 0
+
+
+    &:last-child
+      margin-right: 0
+
+
+    &:hover
+      transform: scale(0.9)
+
+
+
+
+  .title-style-h1
+    font-weight: 400
+    font-size: 26px
+
+
+  .container-item-type
+    margin-bottom: 8px
+    color: #b3b745
+    border-radius: 10px
+    width: 100px
+    padding: 5px
+    text-align: center
+    -webkit-animation-name: Animation
+    animation: Animation infinite
+    -webkit-animation-duration: 12s
+    animation-name: Animation
+    animation-duration: 12s
+
+  .container-pokemon
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    min-height: 100vh
+
+
+  .contaier-title-pokemon
+    background-color: #343a40
+    box-shadow: 0px 6px 15px 6px rgba(36, 37, 38, 0.08)
+    text-align: center
+    border-radius: 16px
+    width: 90%
+    text-transform: capitalize
+    border: 3px solid #b3b745
+
+
+  .pokemon-title
+    color: #b3b745
+    font-weight: bold
+
+
+  .container-abilities
+    margin-bottom: 8px
+    color: white
+    background-color: $salmon
+    border-radius: 10px
+    width: 100px
+    padding: 5px
+    text-align: center

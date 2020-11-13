@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="walldetail">
+<div class="pokemon-view">
+  <div class="section group">
+    <div class="col span_1_of_2">
+      <pokemon-side [pokemon]="pokemon"></pokemon-side>
+    </div>
+    <div class="col span_1_of_2">
+      <pokemon-side-bar [pokemon]="pokemon"></pokemon-side-bar>
+    </div> 
+  </div>
+  <div style="text-align: center;">
+    <button class="button-style" [routerLink]="['/pokemon']">Volver</button>
+  </div>
+  <br> 
+</div>
+</div>
+<app-footer></app-footer>
